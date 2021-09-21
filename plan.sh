@@ -35,6 +35,11 @@ do_prepare() {
   build_line "Setting CC=$CC"
 }
 
+do_build() {
+  ./configure --host=arm
+  make
+}
+
 do_check() {
   make check
 }
